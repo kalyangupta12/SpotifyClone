@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
+*{
+    margin: 0;
+    padding: 0; 
+    /* font-family: "Poppins", sans-serif; */
+
+}
+
+@font-face {
+    font-family: 'GothamBold';
+    src: url('GothamBook.ttf') format('truetype'); /* Update the path */
+    /* Add additional src declarations if you have different font file formats */
+  }
+  
+body{
+    background-color: rgb(235, 235, 235);
+    font-family: 'GothamBold', sans-serif;
+
+}
+.left{
+    width: 25vw;
+}
+
+.right{
+    width: 75vw;
+}
+
+.home ul li{
+    width: 14px;
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    padding-top: 14px;
+    /* font-weight: bold; */
+    padding-left: 10px;
+}
+
+.heading{
+    display:flex;
+    gap:15px;
+    width: 100%;
+    padding-top: 14px;
+    font-weight: bold;
+    align-items: center;
+    font-size: 12px;
+}
+
+.heading img{
+    width:30px;
+}
+
+.library{
+    /* min-height: 75.4vh; */
+    min-height: 80vh;
+    position: relative;
+}
+
+.footer{
+    display: flex;
+    font-size:9px;
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer a{
+    color: grey;
+    text-decoration: none;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(34, 34, 34);
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+}
+
+.header > *{
+    padding: 17px;
+}
+
+.right{
+    margin: 10px 0;
+}
+
+.SpotifyPlaylist{
+    padding: 16px;
+}
+
+.SpotifyPlaylist h1{
+    letter-spacing: -2px;
+}
+
+
+/* #cardimg{
+    width: 240px;
+    height: 240px;
+    border-radius: 7px;
+} */
+
+.card{
+    width: 250px;
+    padding: 10px;
+    background-color: rgb(24,24,24);
+    border-radius: 10px;
+    position: relative;
+    transition: all 1s ease-out;
+}
+
+.card img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    padding: 0;
+    
+}
+
+.card > *{
+    padding-top: 10px;
+}
+
+.card-container{
+    display: flex;
+    gap:10px;
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+
+.card svg{
+    width: 60px;
+    position: absolute;
+    top: 200px;
+    right: 15px;
+    opacity: 0;
+    transition: all 0.2s ease-out;
+
+}
+.card:hover{
+    background-color: rgb(37, 37, 37);
+
+}
+.card:hover svg{
+    top: 185px;
+    opacity: 1;
+}
+.card:hover img{
+    filter: drop-shadow(0 0 0.75rem rgb(14,14,14));
+    
+}
+.card .description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Number of lines to show */
+    -webkit-box-orient: vertical;
+    max-height: 3.6em; /* Adjust based on line height and line count */
+    font-size: 15px;
+}
